@@ -26,7 +26,9 @@ namespace files_module
 
             foreach (var file in foundFiles)
             {
-                if (file.EndsWith("sales.json"))
+                var extension = Path.GetExtension(file);
+
+                if (extension == ".json")
                 {
                     salesFiles.Add(file);
                 }
